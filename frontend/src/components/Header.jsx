@@ -1,8 +1,18 @@
 import { useState, useEffect } from "react";
 import { Phone, Menu, X } from "lucide-react";
+import { useSettings, whatsappUrl } from "../contexts/SettingsContext";
 
-export const WHATSAPP_URL =
-  "https://wa.me/971509244492?text=Hello%2C%20I%27d%20like%20to%20book%20a%20cleaning%20service";
+export function useBusinessLinks() {
+  const { phone, whatsapp } = useSettings();
+  return {
+    WHATSAPP_URL: whatsappUrl(whatsapp),
+    CALL_URL: `tel:+${whatsapp}`,
+    phone,
+  };
+}
+
+// Keep backward-compatible static exports as fallback (used by components before context loads)
+export const WHATSAPP_URL = "https://wa.me/971509244492?text=Hello%2C%20I%27d%20like%20to%20book%20a%20cleaning%20service";
 export const CALL_URL = "tel:+971509244492";
 
 const navLinks = [
@@ -15,6 +25,7 @@ const navLinks = [
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const { WHATSAPP_URL: WA, CALL_URL: CALL, phone } = useBusinessLinks();
 
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 30);
@@ -54,14 +65,14 @@ export default function Header() {
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-3">
             <a
-              href={CALL_URL}
+              href={CALL}
               data-testid="header-call-btn"
               className="flex items-center gap-1.5 px-4 py-2.5 rounded-full border border-slate-200 text-[#0F172A] text-sm font-medium hover:border-[#0284C7] hover:text-[#0284C7] transition-all"
             >
-              <Phone size={13} /> 050 924 4492
+              <Phone size={13} /> {phone}
             </a>
             <a
-              href={WHATSAPP_URL}
+              href={WA}
               target="_blank"
               rel="noopener noreferrer"
               data-testid="header-whatsapp-btn"
@@ -97,11 +108,11 @@ export default function Header() {
             </a>
           ))}
           <div className="flex gap-3 pt-2">
-            <a href={CALL_URL} data-testid="mobile-call-btn" className="flex-1 flex items-center justify-center gap-2 py-3 rounded-full border border-slate-200 text-[#0F172A] font-medium text-sm">
+            <a href={CALL} data-testid="mobile-call-btn" className="flex-1 flex items-center justify-center gap-2 py-3 rounded-full border border-slate-200 text-[#0F172A] font-medium text-sm">
               <Phone size={13} /> Call Us
             </a>
             <a
-              href={WHATSAPP_URL}
+              href={WA}
               target="_blank"
               rel="noopener noreferrer"
               data-testid="mobile-whatsapp-menu-btn"
