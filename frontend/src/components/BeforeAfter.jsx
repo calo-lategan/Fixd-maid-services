@@ -1,71 +1,66 @@
-const BEFORE_IMG =
-  "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80";
-const AFTER_IMG =
-  "https://images.unsplash.com/photo-1661107259637-4e1c55462428?w=700&q=80";
-const AFTER_LIVING =
-  "https://images.unsplash.com/photo-1721932423849-e9033192b190?w=700&q=80";
-const PRO_IMG =
-  "https://images.unsplash.com/photo-1680728334131-220313e30370?w=700&q=80";
-
-const pairs = [
-  { before: BEFORE_IMG, after: AFTER_IMG, label: "Bathroom" },
-  { before: PRO_IMG, after: AFTER_LIVING, label: "Living Room" },
+const COMPANY_PHOTOS = [
+  {
+    src: "https://customer-assets.emergentagent.com/job_spotless-dubai/artifacts/5nm5yfdn_481904813_625592250227700_3285734683162219122_n.jpg",
+    caption: "Our Trained & Verified Team",
+    tag: "The Fixd Team",
+  },
+  {
+    src: "https://customer-assets.emergentagent.com/job_spotless-dubai/artifacts/bqaevblu_5f55970c-b90b-400b-9186-03f8d0a67f35.jpeg",
+    caption: "Professional Cleaning in Action",
+    tag: "At Work",
+  },
+  {
+    src: "https://customer-assets.emergentagent.com/job_spotless-dubai/artifacts/jw3e2ets_2bfd0cc0-b885-4d48-9715-06f03754692b.jpeg",
+    caption: "Detailed Home Cleaning",
+    tag: "Deep Clean",
+  },
 ];
 
 export default function BeforeAfter() {
   return (
-    <section data-testid="before-after-section" className="py-20 sm:py-24 bg-[#F8FAFC]">
+    <section data-testid="gallery-section" className="py-20 sm:py-24 bg-[#F8FAFC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-14 animate-fade-up">
-          <p className="text-xs sm:text-sm uppercase tracking-[0.2em] font-bold text-[#0284C7] mb-3">The Proof</p>
+          <p className="text-xs sm:text-sm uppercase tracking-[0.2em] font-bold text-[#0284C7] mb-3">The Real Deal</p>
           <h2
             className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#0F172A] tracking-tight"
             style={{ fontFamily: "Outfit, sans-serif" }}
           >
-            Real Cleaning Transformations
+            Our Team in Action
           </h2>
           <p className="mt-4 text-base sm:text-lg text-[#64748B] max-w-xl mx-auto">
-            See the difference our professional cleaners make — every single time.
+            Real photos from real Fixd cleaners working in Dubai homes and offices every day.
           </p>
         </div>
 
-        {/* Pairs */}
-        <div className="space-y-8">
-          {pairs.map((pair, i) => (
+        {/* Photo Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5" data-testid="gallery-grid">
+          {COMPANY_PHOTOS.map((photo, i) => (
             <div
               key={i}
-              data-testid={`before-after-pair-${i}`}
-              className="grid grid-cols-1 sm:grid-cols-2 gap-0 rounded-3xl overflow-hidden shadow-xl shadow-slate-900/8 border border-slate-100"
+              data-testid={`gallery-photo-${i}`}
+              className="relative group rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-slate-900/15 hover:-translate-y-1 transition-all duration-400 border border-slate-100"
             >
-              {/* Before */}
-              <div className="relative group">
-                <img
-                  src={pair.before}
-                  alt={`Before ${pair.label}`}
-                  className="w-full h-64 sm:h-80 object-cover filter grayscale-[40%] brightness-90 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-500"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-slate-900/20 group-hover:bg-transparent transition-all duration-500" />
-                <div className="absolute top-4 left-4 bg-slate-900/70 text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider backdrop-blur-sm">
-                  Before
-                </div>
+              <img
+                src={photo.src}
+                alt={photo.caption}
+                className="w-full h-72 sm:h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+              {/* Gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent" />
+
+              {/* Top tag */}
+              <div className="absolute top-4 left-4 bg-[#4ade80]/90 text-white text-xs font-bold px-3 py-1.5 rounded-full backdrop-blur-sm">
+                {photo.tag}
               </div>
 
-              {/* After */}
-              <div className="relative group">
-                <img
-                  src={pair.after}
-                  alt={`After ${pair.label}`}
-                  className="w-full h-64 sm:h-80 object-cover group-hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
-                />
-                <div className="absolute top-4 left-4 bg-[#25D366]/90 text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider backdrop-blur-sm">
-                  After
-                </div>
-                <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm text-[#0F172A] text-xs font-bold px-3 py-1.5 rounded-full">
-                  {pair.label}
-                </div>
+              {/* Bottom caption */}
+              <div className="absolute bottom-4 left-4 right-4">
+                <p className="text-white text-sm font-semibold leading-snug drop-shadow-md">
+                  {photo.caption}
+                </p>
               </div>
             </div>
           ))}
@@ -73,9 +68,10 @@ export default function BeforeAfter() {
 
         {/* Trust note */}
         <p className="text-center text-sm text-[#64748B] mt-8">
-          All results are from real Fixd Maid Services clients in Dubai.
+          All photos are from real Fixd Maid Services jobs across Dubai.
         </p>
       </div>
     </section>
   );
 }
+

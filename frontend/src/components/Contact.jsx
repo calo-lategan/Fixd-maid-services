@@ -194,7 +194,7 @@ export default function Contact() {
                     data-testid="contact-call-alt"
                     className="flex-1 flex items-center justify-center gap-2 py-3 rounded-full border border-slate-200 text-[#0F172A] text-sm font-semibold hover:border-[#0284C7] transition-colors"
                   >
-                    <Phone size={15} /> Call 800 3493
+                    <Phone size={15} /> Call +971 55 168 1111
                   </a>
                 </div>
               </form>
@@ -226,7 +226,7 @@ export default function Contact() {
               </p>
               <div className="flex flex-wrap gap-3 pt-1">
                 <a href={CALL_URL} data-testid="contact-address-call" className="inline-flex items-center gap-1.5 text-sm font-medium text-[#0284C7] hover:underline">
-                  <Phone size={13} /> 800 3493
+                  <Phone size={13} /> +971 55 168 1111
                 </a>
                 <span className="text-slate-300">|</span>
                 <span className="text-sm text-[#64748B]">Open · Closes 8 PM</span>

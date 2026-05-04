@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import { Phone, Menu, X, Sparkles } from "lucide-react";
+import { Phone, Menu, X } from "lucide-react";
 
 export const WHATSAPP_URL =
-  "https://wa.me/9718003493?text=Hello%2C%20I%27d%20like%20to%20book%20a%20cleaning%20service";
-export const CALL_URL = "tel:+9718003493";
+  "https://wa.me/971551681111?text=Hello%2C%20I%27d%20like%20to%20book%20a%20cleaning%20service";
+export const CALL_URL = "tel:+971551681111";
 
 const navLinks = [
   { label: "Services", href: "#services" },
@@ -34,16 +34,12 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2.5" data-testid="logo">
-            <div className="w-9 h-9 bg-[#0284C7] rounded-xl flex items-center justify-center shadow-md shadow-[#0284C7]/30">
-              <Sparkles size={15} className="text-white" />
-            </div>
-            <div className="leading-none">
-              <span className="font-bold text-[#0F172A] text-lg block" style={{ fontFamily: "Outfit, sans-serif" }}>
-                Fixd
-              </span>
-              <span className="text-[#64748B] text-xs">Maid Services</span>
-            </div>
+          <a href="#" className="flex items-center" data-testid="logo">
+            <img
+              src="https://customer-assets.emergentagent.com/job_spotless-dubai/artifacts/cc7ml2yl_344218683_613601974024677_2410243060976620143_n.jpg"
+              alt="Fixd Maid Services Logo"
+              className="h-10 sm:h-12 w-auto object-contain"
+            />
           </a>
 
           {/* Desktop Nav */}
@@ -62,7 +58,7 @@ export default function Header() {
               data-testid="header-call-btn"
               className="flex items-center gap-1.5 px-4 py-2.5 rounded-full border border-slate-200 text-[#0F172A] text-sm font-medium hover:border-[#0284C7] hover:text-[#0284C7] transition-all"
             >
-              <Phone size={13} /> 800 3493
+              <Phone size={13} /> +971 55 168 1111
             </a>
             <a
               href={WHATSAPP_URL}

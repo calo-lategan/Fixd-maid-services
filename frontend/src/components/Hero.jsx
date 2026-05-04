@@ -2,7 +2,7 @@ import { MessageCircle, ChevronDown, Star, Phone } from "lucide-react";
 import { WHATSAPP_URL, CALL_URL } from "./Header";
 
 const HERO_IMG =
-  "https://images.unsplash.com/photo-1721932423849-e9033192b190?crop=entropy&cs=srgb&fm=jpg&ixlib=rb-4.1.0&q=85&w=900";
+  "https://customer-assets.emergentagent.com/job_spotless-dubai/artifacts/bqaevblu_5f55970c-b90b-400b-9186-03f8d0a67f35.jpeg";
 
 export default function Hero() {
   return (
@@ -89,7 +89,7 @@ export default function Hero() {
               className="inline-flex items-center gap-2 text-sm text-[#64748B] hover:text-[#0284C7] transition-colors"
             >
               <Phone size={14} />
-              Or call us: <strong className="text-[#0F172A]">800 3493</strong>
+              Or call us: <strong className="text-[#0F172A]">+971 55 168 1111</strong>
             </a>
           </div>
 

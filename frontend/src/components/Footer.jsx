@@ -1,4 +1,4 @@
-import { Phone, Instagram, Facebook, Globe, Sparkles, MessageCircle } from "lucide-react";
+import { Phone, Instagram, Facebook, Globe, MessageCircle } from "lucide-react";
 import { WHATSAPP_URL, CALL_URL } from "./Header";
 
 const currentYear = new Date().getFullYear();
@@ -24,15 +24,13 @@ export default function Footer() {
 
           {/* Brand */}
           <div className="space-y-4 lg:col-span-1">
-            <div className="flex items-center gap-2.5">
-              <div className="w-9 h-9 bg-[#0284C7] rounded-xl flex items-center justify-center">
-                <Sparkles size={15} className="text-white" />
-              </div>
-              <div>
-                <span className="font-bold text-white text-lg block" style={{ fontFamily: "Outfit, sans-serif" }}>Fixd</span>
-                <span className="text-slate-400 text-xs">Maid Services</span>
-              </div>
-            </div>
+            <a href="#" className="inline-block">
+              <img
+                src="https://customer-assets.emergentagent.com/job_spotless-dubai/artifacts/cc7ml2yl_344218683_613601974024677_2410243060976620143_n.jpg"
+                alt="Fixd Maid Services"
+                className="h-10 w-auto object-contain brightness-0 invert"
+              />
+            </a>
             <p className="text-sm text-slate-400 leading-relaxed max-w-xs">
               Dubai's trusted cleaning service. Professional, reliable, affordable cleaning for homes and offices.
             </p>
@@ -76,7 +74,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <a href={CALL_URL} data-testid="footer-call-link" className="flex items-center gap-2 text-sm text-slate-300 hover:text-white transition-colors">
-                  <Phone size={14} className="text-[#0284C7]" /> 800 3493
+                  <Phone size={14} className="text-[#0284C7]" /> +971 55 168 1111
                 </a>
               </li>
               <li>
