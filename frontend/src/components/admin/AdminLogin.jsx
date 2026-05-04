@@ -78,7 +78,7 @@ export default function AdminLogin() {
           </form>
 
           <p className="text-center text-xs text-[#94a3b8] mt-6">
-            Default password: <code className="bg-slate-100 px-1.5 py-0.5 rounded text-slate-600">Fixd@Admin2024</code>
+            Forgot your password? Contact your developer to reset it.
           </p>
         </div>
 

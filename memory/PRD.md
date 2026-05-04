@@ -1,56 +1,53 @@
 # Fixd Maid Services — Landing Website
 
 ## Problem Statement
-Build a professional cleaning services landing website for "Fixd Maid Services" in Dubai with WhatsApp CTA, contact form, services grid, pricing, testimonials, Google Map embed, and mobile-first design.
+Professional cleaning services landing website for Fixd Maid Services Dubai with admin panel.
 
 ## Architecture
-- **Frontend**: React single-page landing page with Tailwind CSS, Outfit/Manrope fonts, Lucide React icons
-- **Backend**: FastAPI with MongoDB — handles contact form submissions
-- **Deployment**: Kubernetes container (preview at spotless-dubai.preview.emergentagent.com)
-
-## Core Requirements (Static)
-1. Hero section with headline, WhatsApp CTA, rating badge, and hero image
-2. Trust section (4 checkmarks on blue banner)
-3. Services section (5 cards: Home, Deep, Move-in/out, Office, Sofa & Carpet)
-4. How It Works section (4 steps with large background numbers)
-5. Before/After section (2 comparison pairs)
-6. Pricing section (AED 45/hr Standard + Custom Deep Clean)
-7. Testimonials (3 real Google reviews, 4.7★ 274 reviews)
-8. Contact form (Name + Phone + Service + Message → POST /api/contact)
-9. Google Map embed (Dubai Sports City)
-10. Footer with social links (Instagram, Facebook, HiDubai)
-11. Mobile sticky WhatsApp bar
+- **Frontend**: React SPA — Tailwind CSS, Outfit/Manrope fonts, Lucide React, React Router
+- **Backend**: FastAPI + MongoDB — contact form, admin auth (JWT), settings API, email via Resend, Google Calendar OAuth
+- **Deployment**: https://spotless-dubai.preview.emergentagent.com
 
 ## What's Been Implemented (May 2026)
-- ✅ Full landing page with all 10 sections
-- ✅ Sticky glass header with mobile hamburger menu
-- ✅ WhatsApp buttons throughout (wa.me/9718003493)
-- ✅ Click-to-call buttons (tel:+9718003493)
-- ✅ Contact form with validation + success state + backend storage
-- ✅ Google Maps embed showing Dubai Sports City
-- ✅ Mobile sticky bottom CTA bar (WhatsApp + Call)
-- ✅ Backend POST /api/contact endpoint with MongoDB storage
-- ✅ All data-testid attributes on interactive elements
-- ✅ 100% test pass rate (backend + frontend)
+### Landing Page
+- ✅ Sticky glass header with live phone/WhatsApp from settings API
+- ✅ Hero section with real Fixd team photo (mopping cleaner)
+- ✅ Trust bar (4 checkmarks on blue banner)
+- ✅ Services section (5 real company photos — Home, Deep, Move-in/out, Office, Sofa)
+- ✅ How It Works (4 steps)
+- ✅ Photo Gallery (8 real Fixd company photos, 4-column grid)
+- ✅ Facebook Reel video embed
+- ✅ Pricing section (AED 35/hr without materials, AED 45/hr with materials + "Book 3hrs get 1 free" promo)
+- ✅ Google Reviews widget (Google-branded, 4.7★, 274 reviews, rating bars)
+- ✅ Booking form (Name, Phone, Service, Date, Time picker + quick slots)
+- ✅ Google Calendar add-event link after booking
+- ✅ WhatsApp pre-filled booking message
+- ✅ Google Maps embed (Dubai Sports City)
+- ✅ Footer with logo, social links, address
+- ✅ Mobile sticky WhatsApp/Call bar
+
+### Admin Panel (/admin)
+- ✅ JWT-authenticated admin login (password: Fixd@Admin2024)
+- ✅ Bookings tab — view all contact form submissions, mark status, reply on WhatsApp
+- ✅ Settings tab — update phone, WhatsApp, notification email, hours, address (live on website)
+- ✅ Change admin password from settings tab
+- ✅ Calendar tab — Google Calendar OAuth setup wizard (3-step guide)
+- ✅ Email notifications via Resend on every booking
 
 ## Key Details
-- WhatsApp: https://wa.me/9718003493
-- Phone: tel:+9718003493
-- Address: Stadium Point Building, Office 512, Dubai Sports City, Dubai
-- Social: instagram.com/fixduae, facebook.com/fixduae
-- Starting price: AED 45/hour
+- WhatsApp: https://wa.me/971509244492
+- Phone: 050 924 4492
+- Resend API key: set in .env
+- NOTIFICATION_EMAIL: needs to be set in admin settings panel
+- Admin default password: Fixd@Admin2024 (change via Settings tab)
 
-## Prioritized Backlog
-### P0 (Critical for MVP) — DONE
-- All sections, CTAs, contact form
+## P0 — DONE
+## P1 — Remaining
+- Set NOTIFICATION_EMAIL via admin settings to activate email alerts
+- Google Calendar: provide GOOGLE_CLIENT_ID + GOOGLE_CLIENT_SECRET to connect
+- Add real before/after client photos if available
 
-### P1 (Enhancement)
-- Replace before/after stock images with real client photos
-- Add WhatsApp phone number update (confirm correct number with client)
-- Add booking calendar / time slot selection
-
-### P2 (Future)
-- Admin dashboard to view contact form submissions
-- Live chat widget integration
-- SEO meta tags and structured data (LocalBusiness schema)
-- Add Arabic language toggle for UAE market
+## P2 — Future
+- Arabic language toggle for UAE market
+- SEO meta tags + LocalBusiness schema
+- Live chat integration
