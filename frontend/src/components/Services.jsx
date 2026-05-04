@@ -6,31 +6,31 @@ const services = [
     icon: Home,
     title: "Home Cleaning",
     desc: "Regular cleaning for your apartment or villa — kitchens, bathrooms, living areas & more.",
-    img: "https://images.unsplash.com/photo-1721932423849-e9033192b190?w=500&q=80",
+    img: "https://customer-assets.emergentagent.com/job_spotless-dubai/artifacts/e01uk3wj_unnamed.jpg",
   },
   {
     icon: Layers,
     title: "Deep Cleaning",
     desc: "Thorough top-to-bottom cleaning reaching every corner, behind appliances and inside cabinets.",
-    img: "https://images.unsplash.com/photo-1661107259637-4e1c55462428?w=500&q=80",
+    img: "https://customer-assets.emergentagent.com/job_spotless-dubai/artifacts/p36n375k_DSC_0141.JPG",
   },
   {
     icon: Truck,
     title: "Move-in / Move-out",
     desc: "Get your property spotless before moving in or after moving out — full deep clean included.",
-    img: null,
+    img: "https://customer-assets.emergentagent.com/job_spotless-dubai/artifacts/tduuu7p5_unnamed%20%281%29.jpg",
   },
   {
     icon: Building2,
     title: "Office Cleaning",
     desc: "Professional office and commercial space cleaning — daily, weekly, or as needed.",
-    img: "https://images.unsplash.com/photo-1697463624716-cd2f0423d9d9?w=500&q=80",
+    img: "https://customer-assets.emergentagent.com/job_spotless-dubai/artifacts/xws0oc8n_unnamed%20%282%29.jpg",
   },
   {
     icon: Sofa,
     title: "Sofa & Carpet Cleaning",
     desc: "Deep extraction cleaning for sofas, carpets, mattresses — removes stains and allergens.",
-    img: "https://images.unsplash.com/photo-1759722665623-c4c1075c0a6b?w=500&q=80",
+    img: "https://customer-assets.emergentagent.com/job_spotless-dubai/artifacts/buquxsrw_2023-07-05.jpg",
   },
 ];
 

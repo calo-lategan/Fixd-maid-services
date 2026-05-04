@@ -4,6 +4,7 @@ import Trust from "./Trust";
 import Services from "./Services";
 import HowItWorks from "./HowItWorks";
 import BeforeAfter from "./BeforeAfter";
+import VideoShowcase from "./VideoShowcase";
 import Pricing from "./Pricing";
 import Testimonials from "./Testimonials";
 import Contact from "./Contact";
@@ -20,6 +21,7 @@ export default function LandingPage() {
         <Services />
         <HowItWorks />
         <BeforeAfter />
+        <VideoShowcase />
         <Pricing />
         <Testimonials />
         <Contact />

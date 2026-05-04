@@ -1,8 +1,33 @@
 const COMPANY_PHOTOS = [
   {
+    src: "https://customer-assets.emergentagent.com/job_spotless-dubai/artifacts/e01uk3wj_unnamed.jpg",
+    caption: "Villa Deep Clean — Living Room",
+    tag: "Deep Clean",
+  },
+  {
+    src: "https://customer-assets.emergentagent.com/job_spotless-dubai/artifacts/tduuu7p5_unnamed%20%281%29.jpg",
+    caption: "Outdoor & Villa Cleaning",
+    tag: "Exterior",
+  },
+  {
+    src: "https://customer-assets.emergentagent.com/job_spotless-dubai/artifacts/buquxsrw_2023-07-05.jpg",
+    caption: "Our Team — Ready to Clean",
+    tag: "The Fixd Team",
+  },
+  {
+    src: "https://customer-assets.emergentagent.com/job_spotless-dubai/artifacts/xws0oc8n_unnamed%20%282%29.jpg",
+    caption: "Commercial & Gym Cleaning",
+    tag: "Commercial",
+  },
+  {
+    src: "https://customer-assets.emergentagent.com/job_spotless-dubai/artifacts/p36n375k_DSC_0141.JPG",
+    caption: "Window & Curtain Cleaning",
+    tag: "Detail Work",
+  },
+  {
     src: "https://customer-assets.emergentagent.com/job_spotless-dubai/artifacts/5nm5yfdn_481904813_625592250227700_3285734683162219122_n.jpg",
     caption: "Our Trained & Verified Team",
-    tag: "The Fixd Team",
+    tag: "The Team",
   },
   {
     src: "https://customer-assets.emergentagent.com/job_spotless-dubai/artifacts/bqaevblu_5f55970c-b90b-400b-9186-03f8d0a67f35.jpeg",
@@ -12,7 +37,7 @@ const COMPANY_PHOTOS = [
   {
     src: "https://customer-assets.emergentagent.com/job_spotless-dubai/artifacts/jw3e2ets_2bfd0cc0-b885-4d48-9715-06f03754692b.jpeg",
     caption: "Detailed Home Cleaning",
-    tag: "Deep Clean",
+    tag: "Home Clean",
   },
 ];
 
@@ -34,18 +59,18 @@ export default function BeforeAfter() {
           </p>
         </div>
 
-        {/* Photo Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5" data-testid="gallery-grid">
+        {/* Photo Grid — 4 cols desktop */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4" data-testid="gallery-grid">
           {COMPANY_PHOTOS.map((photo, i) => (
             <div
               key={i}
               data-testid={`gallery-photo-${i}`}
-              className="relative group rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-slate-900/15 hover:-translate-y-1 transition-all duration-400 border border-slate-100"
+              className="relative group rounded-2xl overflow-hidden shadow-md hover:shadow-xl hover:shadow-slate-900/15 hover:-translate-y-1 transition-all duration-300 border border-slate-100"
             >
               <img
                 src={photo.src}
                 alt={photo.caption}
-                className="w-full h-72 sm:h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+                className="w-full h-52 sm:h-60 object-cover group-hover:scale-105 transition-transform duration-500"
                 loading="lazy"
               />
               {/* Gradient overlay */}

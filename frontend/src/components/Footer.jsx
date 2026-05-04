@@ -74,7 +74,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <a href={CALL_URL} data-testid="footer-call-link" className="flex items-center gap-2 text-sm text-slate-300 hover:text-white transition-colors">
-                  <Phone size={14} className="text-[#0284C7]" /> +971 55 168 1111
+                  <Phone size={14} className="text-[#0284C7]" /> 050 924 4492
                 </a>
               </li>
               <li>

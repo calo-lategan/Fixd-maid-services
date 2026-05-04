@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import { Phone, Menu, X } from "lucide-react";
 
 export const WHATSAPP_URL =
-  "https://wa.me/971551681111?text=Hello%2C%20I%27d%20like%20to%20book%20a%20cleaning%20service";
-export const CALL_URL = "tel:+971551681111";
+  "https://wa.me/971509244492?text=Hello%2C%20I%27d%20like%20to%20book%20a%20cleaning%20service";
+export const CALL_URL = "tel:+971509244492";
 
 const navLinks = [
   { label: "Services", href: "#services" },
@@ -58,7 +58,7 @@ export default function Header() {
               data-testid="header-call-btn"
               className="flex items-center gap-1.5 px-4 py-2.5 rounded-full border border-slate-200 text-[#0F172A] text-sm font-medium hover:border-[#0284C7] hover:text-[#0284C7] transition-all"
             >
-              <Phone size={13} /> +971 55 168 1111
+              <Phone size={13} /> 050 924 4492
             </a>
             <a
               href={WHATSAPP_URL}

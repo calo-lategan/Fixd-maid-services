@@ -3,33 +3,35 @@ import { WHATSAPP_URL, CALL_URL } from "./Header";
 
 const plans = [
   {
-    name: "Standard Cleaning",
-    price: "AED 45",
+    name: "Standard Clean",
+    price: "AED 35",
     unit: "/hour",
-    desc: "Perfect for regular home maintenance and upkeep.",
+    badge: null,
+    desc: "You provide your own cleaning supplies. We bring the expertise.",
     featured: false,
     features: [
+      "Client provides cleaning materials",
       "Dusting & vacuuming",
       "Kitchen & bathroom cleaning",
       "Mopping all floors",
       "Bedrooms & living areas",
-      "Trash removal",
       "Min. 3-hour booking",
     ],
   },
   {
-    name: "Deep Cleaning",
-    price: "Custom",
-    unit: " quote",
-    desc: "Ideal for move-in/out, seasonal deep cleans, and post-construction.",
+    name: "Full Clean + Materials",
+    price: "AED 45",
+    unit: "/hour",
+    badge: "We Bring Everything",
+    desc: "Our team arrives fully equipped with all professional cleaning supplies.",
     featured: true,
     features: [
-      "Everything in Standard",
-      "Inside appliances (oven, fridge)",
-      "Inside cabinets & drawers",
-      "Skirting boards & light fixtures",
-      "Windows & blinds",
-      "Guaranteed spotless results",
+      "All cleaning materials included",
+      "Professional-grade products",
+      "Dusting, vacuuming & mopping",
+      "Kitchen & bathroom deep clean",
+      "Bedrooms & living areas",
+      "Min. 3-hour booking",
     ],
   },
 ];
@@ -52,6 +54,17 @@ export default function Pricing() {
           </p>
         </div>
 
+        {/* Promo Banner */}
+        <div className="mb-8 flex justify-center" data-testid="promo-banner">
+          <div className="inline-flex items-center gap-3 bg-amber-50 border-2 border-amber-300 rounded-2xl px-6 py-3 shadow-sm">
+            <span className="text-2xl">🎁</span>
+            <div>
+              <p className="text-sm font-bold text-amber-800 uppercase tracking-wide">Special Offer</p>
+              <p className="text-base font-bold text-amber-900">Book 3 Hours — Get 1 Hour FREE!</p>
+            </div>
+          </div>
+        </div>
+
         {/* Plans */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8" data-testid="pricing-grid">
           {plans.map((plan) => (
@@ -65,8 +78,8 @@ export default function Pricing() {
               }`}
             >
               {plan.featured && (
-                <div className="absolute top-5 right-5 bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full">
-                  Most Popular
+                <div className="absolute top-5 right-5 bg-white/25 text-white text-xs font-bold px-3 py-1 rounded-full">
+                  {plan.badge}
                 </div>
               )}
 
@@ -115,7 +128,7 @@ export default function Pricing() {
                   }`}
                 >
                   <MessageCircle size={15} />
-                  {plan.featured ? "Get Custom Quote" : "Book Now"}
+                  {plan.featured ? "Book Now — With Materials" : "Book Now — You Provide Materials"}
                 </a>
                 <a
                   href={CALL_URL}
@@ -134,7 +147,7 @@ export default function Pricing() {
         </div>
 
         <p className="text-center text-sm text-[#64748B] mt-8">
-          All prices include supplies and equipment. Custom quotes available for large spaces.
+          Minimum 3-hour booking. All prices per cleaner. Custom quotes available for large spaces & offices.
         </p>
       </div>
     </section>

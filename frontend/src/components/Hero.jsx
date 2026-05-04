@@ -89,7 +89,7 @@ export default function Hero() {
               className="inline-flex items-center gap-2 text-sm text-[#64748B] hover:text-[#0284C7] transition-colors"
             >
               <Phone size={14} />
-              Or call us: <strong className="text-[#0F172A]">+971 55 168 1111</strong>
+              Or call us: <strong className="text-[#0F172A]">050 924 4492</strong>
             </a>
           </div>
 
