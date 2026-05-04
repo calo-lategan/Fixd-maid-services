@@ -51,11 +51,6 @@ async def submit_contact(data: ContactSubmission):
     return {"success": True, "message": "Thank you! We'll contact you shortly."}
 
 
-@api_router.get("/contacts", response_model=List[dict])
-async def get_contacts():
-    contacts = await db.contact_submissions.find({}, {"_id": 0}).to_list(500)
-    return contacts
-
 
 # ─── App setup ─────────────────────────────────────────────────────────────────
 
