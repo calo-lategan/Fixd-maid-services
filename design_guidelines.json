@@ -1,0 +1,107 @@
+{
+  "theme": "Light",
+  "archetype": "Archetype 1 (Organic & Earthy - Pristine Variant)",
+  "typography": {
+    "heading_font": "Outfit",
+    "body_font": "Manrope",
+    "scale": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl tracking-tight leading-none font-semibold",
+      "h2": "text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-tight font-medium",
+      "h3": "text-xl sm:text-2xl tracking-tight font-medium",
+      "body": "text-base sm:text-lg leading-relaxed text-slate-600",
+      "small": "text-xs sm:text-sm uppercase tracking-[0.2em] font-bold"
+    }
+  },
+  "colors": {
+    "background": "#FFFFFF",
+    "surface": "#F8FAFC",
+    "surface_glass": "bg-white/80 backdrop-blur-xl border-white/40",
+    "primary_brand": "#0284C7",
+    "cta_whatsapp": "#25D366",
+    "text_main": "#0F172A",
+    "text_muted": "#64748B",
+    "accent_subtle": "#E0F2FE",
+    "border": "#E2E8F0"
+  },
+  "layout": {
+    "spacing_scale": "p-4, p-6, p-8, p-12, p-16, p-24",
+    "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    "grid_bento": "grid grid-cols-1 md:grid-cols-8 lg:grid-cols-12 gap-6 lg:gap-8",
+    "mobile_strategy": "All interactive elements must be min 48px height. Mobile layout stack order prioritized. Sticky bottom WhatsApp button mandatory on mobile viewports."
+  },
+  "components": {
+    "buttons": {
+      "whatsapp": "bg-[#25D366] text-white hover:bg-[#20bd5a] hover:-translate-y-1 transition-transform shadow-lg shadow-[#25D366]/20 font-medium px-8 py-4 rounded-full flex items-center justify-center gap-2",
+      "primary": "bg-slate-900 text-white hover:bg-slate-800 hover:-translate-y-1 transition-transform shadow-lg shadow-slate-900/10 font-medium px-8 py-4 rounded-full flex items-center justify-center gap-2",
+      "secondary": "bg-white text-slate-900 border border-slate-200 hover:border-slate-400 transition-colors px-8 py-4 rounded-full flex items-center justify-center gap-2"
+    },
+    "cards": {
+      "service_card": "bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl hover:shadow-sky-900/5 transition-all duration-300 group flex flex-col gap-4",
+      "pricing_card": "bg-white p-8 sm:p-10 rounded-3xl border border-slate-200 shadow-sm flex flex-col gap-6"
+    }
+  },
+  "sections": [
+    {
+      "name": "Header",
+      "instructions": "Crystal glass sticky header (z-50) using `bg-white/80 backdrop-blur-xl border-b border-slate-200/50`. Brand logo left, nav links center (hidden on mobile), 'Book Now' CTA right."
+    },
+    {
+      "name": "Hero",
+      "instructions": "Headline: 'Professional Cleaning Services in Dubai — Fast, Reliable & Affordable'. Layout: Split 50/50 on desktop, stacked on mobile. Use `hero_image` with subtle rounded corners (rounded-3xl). Primary CTA: WhatsApp button. Secondary CTA: 'View Pricing' anchor link."
+    },
+    {
+      "name": "Trust & Brands",
+      "instructions": "Simple horizontal flex layout with checkmarks for: 'Background Checked', 'Fully Insured', 'Eco-friendly Products', 'Same Day Service'."
+    },
+    {
+      "name": "Services",
+      "instructions": "Bento grid or responsive standard grid. Cards: Home Cleaning, Deep Cleaning, Move-in/Move-out, Office Cleaning, Sofa & Carpet Cleaning. Map to the provided `media.services` images where applicable. Use Lucide icons for the others."
+    },
+    {
+      "name": "How It Works",
+      "instructions": "3 steps: 1. Book Online/WhatsApp, 2. We Clean, 3. You Relax. Use large typography numbers (`text-8xl text-slate-100 font-black absolute`) behind the step content for a premium layered look."
+    },
+    {
+      "name": "Before & After",
+      "instructions": "Stacked on mobile, side-by-side flex on desktop. Use `cleaning_pro` image and `services.bathroom` to demonstrate pristine results."
+    },
+    {
+      "name": "Pricing",
+      "instructions": "Two minimal pricing cards. 1. Standard (Starting from AED 45/hour), 2. Deep Clean (Custom quote). Focus on transparency. Use checkmarks for features."
+    },
+    {
+      "name": "Testimonials",
+      "instructions": "Horizontal scroll or grid of 3 reviews. Use `media.testimonials` for user avatars. Highlight locations like 'Dubai Sports City' in the review text to build local trust."
+    },
+    {
+      "name": "Contact & Map",
+      "instructions": "Contact form (Name, Phone, Service Dropdown) beside an embedded Google Map of Dubai. Include a prominent Click-to-call button. Use accessible Shadcn-like form inputs with clear borders."
+    },
+    {
+      "name": "Mobile Sticky CTA",
+      "instructions": "Fixed bottom bar (`fixed bottom-0 left-0 right-0 p-4 bg-white/90 backdrop-blur-md border-t border-slate-200 z-50 md:hidden`) containing a full-width WhatsApp button."
+    }
+  ],
+  "media": {
+    "hero_image": "https://images.unsplash.com/photo-1721932423849-e9033192b190?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTB8MHwxfHNlYXJjaHwxfHxicmlnaHQlMjBjbGVhbiUyMG1vZGVybiUyMGxpdmluZyUyMHJvb20lMjB3aW5kb3d8ZW58MHx8fHwxNzc3ODg1ODIxfDA&ixlib=rb-4.1.0&q=85",
+    "cleaning_pro": "https://images.unsplash.com/photo-1680728334131-220313e30370?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzF8MHwxfHNlYXJjaHwxfHxzbWlsaW5nJTIwY2xlYW5lciUyMGFwcm9ufGVufDB8fHx8MTc3Nzg4NTg0Mnww&ixlib=rb-4.1.0&q=85",
+    "services": {
+      "sofa": "https://images.unsplash.com/photo-1759722665623-c4c1075c0a6b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NDh8MHwxfHNlYXJjaHwzfHxjbGVhbiUyMHNvZmElMjBsaXZpbmclMjByb29tfGVufDB8fHx8MTc3Nzg4NTg0Mnww&ixlib=rb-4.1.0&q=85",
+      "office": "https://images.unsplash.com/photo-1697463624716-cd2f0423d9d9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDN8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBjbGVhbmVyJTIwb2ZmaWNlfGVufDB8fHx8MTc3Nzg4NTgyMXww&ixlib=rb-4.1.0&q=85",
+      "bathroom": "https://images.unsplash.com/photo-1661107259637-4e1c55462428?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2ODh8MHwxfHNlYXJjaHwyfHxzcG90bGVzcyUyMGNsZWFuJTIwYmF0aHJvb218ZW58MHx8fHwxNzc3ODg1ODQyfDA&ixlib=rb-4.1.0&q=85"
+    },
+    "testimonials": [
+      "https://images.unsplash.com/photo-1672462478040-a5920e2c23d8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA0MTJ8MHwxfHNlYXJjaHwxfHxwb3J0cmFpdCUyMHNtaWxpbmclMjBwZXJzb258ZW58MHx8fHwxNzc3ODcyNDEyfDA&ixlib=rb-4.1.0&q=85",
+      "https://images.unsplash.com/photo-1592234789031-94bf65f630ed?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA0MTJ8MHwxfHNlYXJjaHwzfHxwb3J0cmFpdCUyMHNtaWxpbmclMjBwZXJzb258ZW58MHx8fHwxNzc3ODcyNDEyfDA&ixlib=rb-4.1.0&q=85",
+      "https://images.unsplash.com/photo-1718895480108-37c0346792ed?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA0MTJ8MHwxfHNlYXJjaHw0fHxwb3J0cmFpdCUyMHNtaWxpbmclMjBwZXJzb258ZW58MHx8fHwxNzc3ODcyNDEyfDA&ixlib=rb-4.1.0&q=85"
+    ]
+  },
+  "instructions_to_main_agent": [
+    "Run `yarn add lucide-react` for icons.",
+    "Import Google Fonts: 'Outfit' (Headings) and 'Manrope' (Body). DO NOT USE INTER.",
+    "All interactive elements MUST have `data-testid` attributes.",
+    "Mobile-first constraint: Ensure the mobile sticky CTA is present and does not overlap footer links when scrolled.",
+    "Use generous padding `py-20` or `py-24` between main sections.",
+    "Images should have `object-cover` and rounded corners to match the premium, approachable brand vibe."
+  ]
+}
