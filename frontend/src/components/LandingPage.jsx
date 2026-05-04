@@ -6,6 +6,7 @@ import HowItWorks from "./HowItWorks";
 import BeforeAfter from "./BeforeAfter";
 import VideoShowcase from "./VideoShowcase";
 import Pricing from "./Pricing";
+import GoogleReviews from "./GoogleReviews";
 import Testimonials from "./Testimonials";
 import Contact from "./Contact";
 import Footer from "./Footer";
@@ -23,7 +24,7 @@ export default function LandingPage() {
         <BeforeAfter />
         <VideoShowcase />
         <Pricing />
-        <Testimonials />
+        <GoogleReviews />
         <Contact />
       </main>
       <Footer />

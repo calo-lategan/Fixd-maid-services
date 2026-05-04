@@ -6,7 +6,7 @@ const services = [
     icon: Home,
     title: "Home Cleaning",
     desc: "Regular cleaning for your apartment or villa — kitchens, bathrooms, living areas & more.",
-    img: "https://customer-assets.emergentagent.com/job_spotless-dubai/artifacts/e01uk3wj_unnamed.jpg",
+    img: "https://customer-assets.emergentagent.com/job_spotless-dubai/artifacts/buquxsrw_2023-07-05.jpg",
   },
   {
     icon: Layers,
@@ -24,13 +24,13 @@ const services = [
     icon: Building2,
     title: "Office Cleaning",
     desc: "Professional office and commercial space cleaning — daily, weekly, or as needed.",
-    img: "https://customer-assets.emergentagent.com/job_spotless-dubai/artifacts/xws0oc8n_unnamed%20%282%29.jpg",
+    img: "https://customer-assets.emergentagent.com/job_spotless-dubai/artifacts/bqaevblu_5f55970c-b90b-400b-9186-03f8d0a67f35.jpeg",
   },
   {
     icon: Sofa,
     title: "Sofa & Carpet Cleaning",
     desc: "Deep extraction cleaning for sofas, carpets, mattresses — removes stains and allergens.",
-    img: "https://customer-assets.emergentagent.com/job_spotless-dubai/artifacts/buquxsrw_2023-07-05.jpg",
+    img: "https://customer-assets.emergentagent.com/job_spotless-dubai/artifacts/e01uk3wj_unnamed.jpg",
   },
 ];
 

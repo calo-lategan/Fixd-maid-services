@@ -28,7 +28,7 @@ export default function Footer() {
               <img
                 src="https://customer-assets.emergentagent.com/job_spotless-dubai/artifacts/cc7ml2yl_344218683_613601974024677_2410243060976620143_n.jpg"
                 alt="Fixd Maid Services"
-                className="h-10 w-auto object-contain brightness-0 invert"
+                className="h-10 w-auto object-contain bg-white px-2 py-1 rounded-lg"
               />
             </a>
             <p className="text-sm text-slate-400 leading-relaxed max-w-xs">

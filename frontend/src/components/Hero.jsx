@@ -2,7 +2,7 @@ import { MessageCircle, ChevronDown, Star, Phone } from "lucide-react";
 import { WHATSAPP_URL, CALL_URL } from "./Header";
 
 const HERO_IMG =
-  "https://customer-assets.emergentagent.com/job_spotless-dubai/artifacts/bqaevblu_5f55970c-b90b-400b-9186-03f8d0a67f35.jpeg";
+  "https://customer-assets.emergentagent.com/job_spotless-dubai/artifacts/xws0oc8n_unnamed%20%282%29.jpg";
 
 export default function Hero() {
   return (
